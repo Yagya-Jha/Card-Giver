@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Home page -->
+  <url>
+    <loc>https://yagya-jha.github.io/Card-Giver/</loc>
+    <lastmod>2025-03-22</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Output page -->
+  <url>
+    <loc>https://yagya-jha.github.io/Card-Giver/output/output.html</loc>
+    <lastmod>2025-03-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Fancy Output page -->
+  <url>
+    <loc>https://yagya-jha.github.io/Card-Giver/fancy_output/fancy_output.html</loc>
+    <lastmod>2025-03-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

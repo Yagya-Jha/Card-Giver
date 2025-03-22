@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg, brown 0%,#390f0f 5%,brown 10%, #390f0f 25%,brown 30%, #390f0f 50%,brown 55%, #390f0f 75%,brown 80%, #390f0f 95%, brown 100%);
+    background-size: 100%;
+    font-family: 'Arial', sans-serif;
+  }
+#aath {
+    position: absolute;
+    top:95vh;
+}
+
+a {
+    font-size: 1.2em;
+    color: yellow;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: orange;
+}
+  .card {
+    position: relative;
+    max-width: 300px;
+    max-height: 400px;
+    width: 80vw;
+    height: 60vh;
+    perspective: 1500px;
+    cursor: pointer;
+    /* transition: 0.8s; */
+    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .card.open {
+    transform: translateX(10vw);
+    width: 80vw;
+    height: 60vh;
+    /* transition: 0.8s; */
+  }
+  
+  .card-front,
+  .card-inside {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #ffffff 0%, #e2ecff 100%);
+  }
+  
+  .card-front {
+    transform-origin: left;
+    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2;
+  }
+  
+  .card.open .card-front {
+    transform: rotateY(-180deg);
+  }
+  
+  .card-front h1 {
+    font-size: 2em;
+    color: #ff69b4;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-inside {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .cake-drawing {
+    display: none;
+    max-width: 250px;
+    max-height: 250px;
+    width: 100%;
+    height: 100%;
+    margin-top: 180px;
+    animation: moveupdown 1.5s infinite alternate ease-in-out;
+  }
+
+  @keyframes moveupdown {
+    0% {
+      transform: rotate(2deg);
+    }
+    100% {
+      transform: rotate(-2deg);
+    }
+  }
+  
+  .birthday-message {
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.5;
+    padding: 0 20px;
+  }
+h1{
+  color: yellow;
+}
+
+@media (max-width: 700px) {
+  .card.open {
+    transform: scale(0.6,0.6) translateX(40vw);
+    /* transition: width 1s;
+    transition: height 1s;
+    width: 40vw;
+    height: 30vh; */
+    /* transform: scale(0.6,0.6); */
+  }
+}

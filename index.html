@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Giver</title>
+    <link rel="icon" type="image/png" href="./logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <meta name="description" content="Send free online cards easily with no login required. Create and share beautiful digital cards for any occasion without any hassle.">
+
+    <!-- Meta Keywords -->
+    <meta name="keywords" content="free online cards, digital cards, e-cards, free greeting cards, no login cards, send cards online, instant cards, birthday cards online, free e-cards, send greeting cards">
+
+    <!-- Meta Robots (helps with indexing) -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags (for social media sharing) -->
+    <meta property="og:title" content="Send Free Online Cards Without Login">
+    <meta property="og:description" content="Create and send beautiful, free digital cards with no login. Perfect for birthdays, holidays, and more!">
+    <meta property="og:image" content="URL_to_an_image_representing_your_site">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Send Free Online Cards Without Login">
+    <meta name="twitter:description" content="Create and send beautiful, free digital cards without the need for an account or login.">
+    <meta name="twitter:image" content="URL_to_an_image_representing_your_site">
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "Free Online Cards",
+          "description": "Send beautiful and customizable digital cards online for free, with no login required. Perfect for birthdays, anniversaries, and special occasions. Enjoy a variety of card types, all easy to personalize, offering infinite possibilities for your greetings.",
+          "url": "https://yagya-jha.github.io/Card-Giver",
+          "image": "https://raw.githubusercontent.com/Yagya-Jha/Card-Giver/main/logo.png",
+          "mainEntityOfPage": "https://yagya-jha.github.io/Card-Giver",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Yagya Jha"
+          },
+          "author": {
+            "@type": "Organization",
+            "name": "Yagya Jha"
+          },
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "INR",
+            "price": "0",
+            "url": "https://yagya-jha.github.io/Card-Giver"
+          }
+        }
+        </script>
+        
+
+</head>
+<body>
+    <form class="event-form">
+        <!-- Dropdown Menu -->
+        <div class="navbar">
+            <button type="button" class="dropdown-btn" id="event">Event</button>
+            <div class="dropdown-content">
+                <a href="#" data-value="Birthday">Birthday</a>
+                <a href="#" data-value="Anniversary">Anniversary</a>
+                <a href="#" data-value="Custom">Custom Event/Festial</a>
+            </div>
+        </div>
+
+        <!-- Input Fields -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter name">
+
+        <label for="message">Message:</label>
+        <div class="container">
+            <input type="text" id="message" maxlength="250" oninput="updateCounter()" placeholder="Enter a message">
+            <span class="counter" id="charCounter">0/250</span>
+        </div>
+
+        <label for="senderName">Your Name:</label>
+        <input type="text" id="senderName" placeholder="Enter your name">
+
+        <button type="button" class="dropdown-btn" id="image_selector">Image</button>
+
+        <!-- Advanced Options Dropdown -->
+        <button type="button" class="dropdown-btn advanced-btn"><span class="triangle-icon"></span>Advanced Options</button>
+        <div class="advanced-content" id="advanced-options">
+            <!-- Background Color Gradient -->
+            <h3>Background Color Gradient</h3>
+            <input type="color" id="bgColor1" name="bgColor1" value="#ff9a9e">
+            <input type="color" id="bgColor2" name="bgColor2" value="#fad0c4">
+
+            <!-- Text Color -->
+            <h3>Text Color</h3>
+            <input type="color" id="textColor" name="textColor" value="#ffffff">
+        </div>
+
+
+            <div class="dropdown-bton" id="submi">Finish!</div>
+        
+    </form>
+<!-- Share Popup -->
+<div id="share-popup" class="share-popup">
+    <div class="popup-content">
+        <button id="close-popup" class="close-btn">&times;</button>
+        <h3>Share this link to your loved one</h3>
+        <input type="text" id="share-link" readonly>
+        <button id="copy-btn" class="popup-btn">Copy to Clipboard</button>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
